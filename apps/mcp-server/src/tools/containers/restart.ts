@@ -1,4 +1,5 @@
 import { z } from "zod";
+import docker from "../../docker/client.js";
 
 export const restartContainerTool = {
     name: "docker.container.restart",

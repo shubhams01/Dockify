@@ -44,7 +44,7 @@ export const logsContainerTool = {
             timestamps: input.timestamps,
             since: input.since,
             until: input.until,
-        } as any) as Buffer;
+        } as any) as any as Buffer;
 
         return {
             containerId: input.id,
