@@ -1,10 +1,6 @@
 # <h3>Dockify</h3>
 
 <p align="center">
-  <img src="./docs/assets/logo.png" alt="Dockify Logo" width="180"/>
-</p>
-
-<p align="center">
   <strong>AI-Native Docker Management Platform powered by the Model Context Protocol (MCP)</strong>
 </p>
 
@@ -14,7 +10,6 @@
 ![Node.js](https://img.shields.io/badge/Node.js-20+-green?style=for-the-badge\&logo=node.js)
 ![Docker](https://img.shields.io/badge/Docker-Engine-2496ED?style=for-the-badge\&logo=docker)
 ![MCP](https://img.shields.io/badge/MCP-Compatible-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)
 
 </p>
 
@@ -89,7 +84,7 @@ Analyze container logs
 # 🏗 Architecture
 
 ```text
-                    AI Assistant
+                AI Assistant
 
  Claude | ChatGPT | Copilot | Cursor | Codex
 
@@ -264,33 +259,6 @@ Every Docker capability will be implemented once and exposed through:
 * Web Dashboard
 * CLI
 * Automation Workflows
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository.
-2. Create a feature branch.
-
-```bash
-git checkout -b feature/amazing-feature
-```
-
-3. Commit your changes.
-
-```bash
-git commit -m "Add amazing feature"
-```
-
-4. Push to your branch.
-
-```bash
-git push origin feature/amazing-feature
-```
-
-5. Open a Pull Request.
 
 ---
 
