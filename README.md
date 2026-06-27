@@ -224,15 +224,15 @@ Supported:
 
 | Tool                     | Status |
 | ------------------------ | ------ |
-| docker.container.list    | ✅      |
-| docker.container.inspect | ✅      |
-| docker.container.start   | ✅      |
-| docker.container.stop    | ✅      |
-| docker.container.restart | ✅      |
-| docker.container.remove  | ✅      |
-| docker.container.logs    | 🚧     |
-| docker.container.stats   | 🚧     |
-| docker.container.exec    | 🚧     |
+| docker.container.list    |  ✅    |
+| docker.container.inspect |  ✅    |
+| docker.container.start   |  ✅    |
+| docker.container.stop    |  ✅    |
+| docker.container.restart |  ✅    |
+| docker.container.remove  |  ✅    |
+| docker.container.logs    |  ✅    |
+| docker.container.stats   |  ✅    |
+| docker.container.exec    |  ✅    |
 
 ---
 
@@ -240,11 +240,11 @@ Supported:
 
 | Tool                 | Status |
 | -------------------- | ------ |
-| docker.image.list    | 🚧     |
-| docker.image.inspect | 🚧     |
-| docker.image.pull    | 🚧     |
-| docker.image.remove  | 🚧     |
-| docker.image.tag     | 🚧     |
+| docker.image.list    |  ✅    |
+| docker.image.inspect |  ✅    |
+| docker.image.pull    |  ✅    |
+| docker.image.remove  |  ✅    |
+| docker.image.tag     |  ✅    |
 
 ---
 
