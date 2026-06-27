@@ -1,4 +1,4 @@
-# <h3>Dockify</h3>
+# <h3 align="center">Dockify</h3>
 
 <p align="center">
   <strong>AI-Native Docker Management Platform powered by the Model Context Protocol (MCP)</strong>
@@ -173,7 +173,7 @@ src/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/<username>/dockify.git
+git clone https://github.com/shubhams01/dockify.git
 
 cd dockify
 ```
