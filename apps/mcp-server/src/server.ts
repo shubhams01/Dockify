@@ -1,8 +1,8 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 
-import { containerTools } from "./tools/containers";
-// import { imageTools } from "./tools/images";
+import { containerTools } from "./tools/containers/index.js";
+import { imageTools } from "./tools/images/index.js";
 
 async function bootstrap() {
   const server = new McpServer({
@@ -15,15 +15,15 @@ async function bootstrap() {
     server.tool(
       tool.name,
       tool.description,
-      tool.inputSchema.shape,
-      async (args) => {
+      tool.inputSchema.shape as any,
+      async (args: any) => {
         try {
           const result = await tool.execute(args);
 
           return {
             content: [
               {
-                type: "text",
+                type: "text" as const,
                 text: JSON.stringify(result, null, 2),
               },
             ],
@@ -32,7 +32,7 @@ async function bootstrap() {
           return {
             content: [
               {
-                type: "text",
+                type: "text" as const,
                 text:
                   error instanceof Error
                     ? error.message
@@ -47,40 +47,40 @@ async function bootstrap() {
   }
 
   // Register Image Tools
-//   for (const tool of imageTools) {
-//     server.tool(
-//       tool.name,
-//       tool.description,
-//       tool.inputSchema.shape,
-//       async (args) => {
-//         try {
-//           const result = await tool.execute(args);
+  for (const tool of imageTools) {
+    server.tool(
+      tool.name,
+      tool.description,
+      tool.inputSchema.shape as any,
+      async (args: any) => {
+        try {
+          const result = await tool.execute(args);
 
-//           return {
-//             content: [
-//               {
-//                 type: "text",
-//                 text: JSON.stringify(result, null, 2),
-//               },
-//             ],
-//           };
-//         } catch (error) {
-//           return {
-//             content: [
-//               {
-//                 type: "text",
-//                 text:
-//                   error instanceof Error
-//                     ? error.message
-//                     : "Unknown error",
-//               },
-//             ],
-//             isError: true,
-//           };
-//         }
-//       }
-//     );
-//   }
+          return {
+            content: [
+              {
+                type: "text" as const,
+                text: JSON.stringify(result, null, 2),
+              },
+            ],
+          };
+        } catch (error) {
+          return {
+            content: [
+              {
+                type: "text" as const,
+                text:
+                  error instanceof Error
+                    ? error.message
+                    : "Unknown error",
+              },
+            ],
+            isError: true,
+          };
+        }
+      }
+    );
+  }
 
   const transport = new StdioServerTransport();
 

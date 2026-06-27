@@ -1,5 +1,5 @@
 import { z } from "zod";
-import docker from "../../docker/client";
+import docker from "../../docker/client.js";
 
 export const stopContainerTool = {
     name: "docker.container.stop",
